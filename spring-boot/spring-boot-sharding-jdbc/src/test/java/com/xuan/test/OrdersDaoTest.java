@@ -21,6 +21,6 @@ public class OrdersDaoTest {
     @Test
     public void name() {
         List<Orders> all = ordersDao.getAll();
-        System.out.println(all);
+        System.out.println(all.toString());
     }
 }
