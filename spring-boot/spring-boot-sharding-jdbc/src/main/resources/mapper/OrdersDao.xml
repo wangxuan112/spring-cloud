@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xuan.spring.boot.sharding.jdbc.mapper.OrdersDao">
+
+    <select id="getAll" resultType="com.xuan.spring.boot.sharding.jdbc.common.model.Orders">
+        select * from orders ;
+    </select>
+
+</mapper>
