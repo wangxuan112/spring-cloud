@@ -1,6 +1,6 @@
 package com.xuan.spring.boot.sharding.jdbc.controller;
 
-import com.xuan.spring.boot.sharding.jdbc.common.model.Orders;
+import com.xuan.spring.boot.sharding.jdbc.common.model.Order;
 import com.xuan.spring.boot.sharding.jdbc.mapper.OrdersDao;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ public class OrderController {
     private OrdersDao ordersDao;
 
     @GetMapping("orders")
-    public List<Orders> getAll() {
+    public List<Order> getAll() {
         return ordersDao.getAll();
     }
 }

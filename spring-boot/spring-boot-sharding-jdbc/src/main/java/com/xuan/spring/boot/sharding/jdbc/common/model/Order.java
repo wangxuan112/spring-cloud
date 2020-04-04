@@ -1,8 +1,11 @@
 package com.xuan.spring.boot.sharding.jdbc.common.model;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,9 +15,12 @@ import java.util.Date;
  */
 @Data
 @ToString
-public class Orders implements Serializable {
+@Builder
+@TableName("t_order")
+public class Order implements Serializable {
     private static final long serialVersionUID = 1L;
-    private Integer id;
+    @Id
+    private Long id;
 
     private Integer userId;
 
@@ -27,6 +33,4 @@ public class Orders implements Serializable {
     private Date addTime;
 
     private Date lastUpdateTime;
-
-
 }

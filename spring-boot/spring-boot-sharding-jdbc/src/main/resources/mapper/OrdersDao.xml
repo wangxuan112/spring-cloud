@@ -2,8 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xuan.spring.boot.sharding.jdbc.mapper.OrdersDao">
 
-    <select id="getAll" resultType="com.xuan.spring.boot.sharding.jdbc.common.model.Orders">
-        select * from orders ;
+    <select id="getAll" resultType="com.xuan.spring.boot.sharding.jdbc.common.model.Order">
+        select (id,user_id,product_id,pay_amount,status) from t_order ;
     </select>
-
 </mapper>
